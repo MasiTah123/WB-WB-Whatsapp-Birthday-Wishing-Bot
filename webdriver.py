@@ -20,8 +20,9 @@ class Initialze_Script:
         '''
 
         '''Firefox: '''
-        self.profile = webdriver.FirefoxProfile("<PATH TO DEFAULT FIREFOX PROFILE")
-        self.driver = webdriver.Firefox(self.profile)
+        self.chropt = webdriver.ChromeOptions() 
+        self.chropt.add_argument("user-data-dir=<ENTER THE PATH TO THE CHROME USER DATA>")
+        self.driver = webdriver.Chrome(options = self.chropt)
 
 
         self.driver.get("https://web.whatsapp.com/")

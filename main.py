@@ -26,7 +26,7 @@ for name, sent in zip(names, already_sent):
     except:
         message_block_value = randomize_messages(sent)
     message = message_block_value()
-    Initialze_Script().send_message(name= name, message = f"Hi {nicknames[idx]}, {message[1]}")
+    Initialze_Script().send_message(name = name, message = f"Hi {nicknames[idx]}, {message[1]}")
     Update(message[0], idx)
     idx+=1
 
